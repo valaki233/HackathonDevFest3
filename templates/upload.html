@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+
+    <div class="wrapper ms-auto " style="  display: grid; background-color: #333; border-color: aqua; border-width: 4px; border-style: solid;">
+        
+        <div class="title text-white ">
+            Upload
+        </div>
+        <form action="/upload" method="post" name="upload" id="upload" enctype="multipart/form-data" class="text-center ps-5 pe-5">
+            <div class="field" style=" border-radius: 0%;">
+                <input type="text" name="class" class="formInputs" placeholder="Subject" style=" border-radius: 5%;" required>
+            </div>
+            <div class="field" >
+                <button type="button" class="formInputs p-0 w-100" id="actual-btn" onclick="document.getElementById('fileInput').click();" style="border-color: black;">Choose File</button>
+                <input type="file" id="fileInput" name="file" class="d-none" required>
+            </div>
+            <div class="field" style="margin-top: 50px;">
+                <input type="submit" style=" border-radius: 0%;" class="formInputs" value="Upload">
+            </div>
+            
+
+            
+            <p class="text-white">Your score is: {{data}}</p>
+            
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('fileInput').addEventListener('change', function() {
+        var fileName = document.getElementById('fileInput').files[0].name;
+        document.getElementById('actual-btn').innerText = fileName;
+    });
+</script>
+{% endblock %}

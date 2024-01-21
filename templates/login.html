@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+
+  <div id="video-container">
+    <video width="400" style="z-index: -10;" >
+      <source src="./static/bvid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    function playVideo() {
+      var videoContainer = document.getElementById('video-container');
+      videoContainer.style.display = 'block';
+
+      var video = document.querySelector('video');
+      video.play();
+    }
+  </script>
+    <!--<form action="/login" method="post" class="text-center">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto mt-4" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>-->
+
+    <div class="wrapper ms-auto " style="  display: grid; background-color: #333; border-color: aqua; border-width: 4px; border-style: solid;">
+        
+        <div class="title text-white ">
+        Login
+        </div>
+        <form action="/login" method="post" id="form" class="text-center ps-5 pe-5">
+            <div class="field">
+                <input style="background-color: #333; color: white;" type="text" autofocus autocomplete="off"  id="username" name="username" required>
+                <label class="text-white" style="background-color: #333;">Username</label>
+            </div>
+            <div class="field">
+                <input style="background-color: #333; color: white;" id="password" name="password" type="password" required>
+                <label class="text-white "  style="background-color: #333;">Password</label>
+            </div>
+            <div class="info-error mt-2">
+                <p>{{data}}</p>
+            </div>
+            
+            <div class="field">
+                <input type="submit" onclick="playVideo()" onclick="delaySubmit()" id="submitBtn" value="Login" id="playButton">
+            </div>
+
+
+            <div class="">
+                <div class="pass-link">
+                    <a onclick="alert('And what schould I do about that?')" class="text-white">Forgot password?</a>
+                </div>
+                <div class="signup-link text-white">
+                    Not a member --> <a href="/register" class="text-white ">Sign up</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function delaySubmit() {
+      // Disable the button to prevent multiple clicks
+      document.getElementById('submitBtn').disabled = true;
+
+      // Set a 10-second delay (10000 milliseconds)
+      setTimeout(function() {
+        // Enable the button after the delay
+        document.getElementById('submitBtn').disabled = false;
+
+        // Submit the form
+        document.getElementById('form').submit();
+      }, 10000);
+    }
+  </script>
+
+{% endblock %}

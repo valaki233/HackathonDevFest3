@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+
+    <div class="wrapper ms-auto " style="  display: grid; background-color: #333; border-color: aqua; border-width: 4px; border-style: solid;">
+        <div class="title text-white ">
+            Files
+        </div>
+        <select id="main_select">
+            
+        </select>
+        <strong><h2 style="font-size: 1.5em; font-weight: 600; margin-top: 2.5em;" class="text-white text-center"><div class="field">
+            <a href="" id="dw"><input type="button" value="Download"></a>
+            </div></h2></strong>
+        <script>
+            var inplst = "{{data}}"
+            var id = "{{id}}"
+            msg = "{{msg}}"
+            if (msg != ""){
+                alert(msg)
+            }
+            if (inplst != "" && id != "") {
+                sl = document.getElementById("main_select")
+                var lst = inplst.split(";")
+                console.log(lst)
+                document.getElementById("dw").href = "./uploads/" + id + "/" + lst[0];
+                document.getElementById("dw").download = lst[0];
+                lst.forEach(element => {
+                    op = document.createElement("option")
+                    op.value = element
+                    tx = document.createTextNode(element)
+                    op.appendChild(tx)
+                    sl.appendChild(op)
+                });
+                prev_selected = ""
+                selected = ""
+                function sel(){
+                    selected = document.getElementById("main_select").value
+                    console.log(selected)
+                    if(selected != prev_selected) {
+                        console.log("uploads/" + id + "/" + selected)
+                        document.getElementById("dw").href = "./uploads/" + id + "/" + selected;
+                        document.getElementById("dw").download = selected;
+                    }
+                }    
+            }
+            document.getElementById("main_select").addEventListener("change", sel)
+            document.getElementById("main_select").addEventListener("click", sel)
+        </script>
+    </div>
+</div>
+
+{% endblock %}

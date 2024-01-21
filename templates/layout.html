@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- http://getbootstrap.com/docs/5.1/ -->
+ <link rel="stylesheet" href="/static/style.css">
+ <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+ <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBudy</title>
+</head>
+
+
+
+<body class="bg-transparent ">
+    {% if session["user_id"] %}
+        
+
+        <div class="header w-100 position-fixed top-0" style="border-style: solid; border-top: 4px; border-left: 4px; border-right: 4px; border-width: 4px; border-color: aqua; z-index: 100000;">
+            <div class="left-div">
+                <a href="/login">
+                  </svg><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="white" href="/login" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                  </svg></a>
+            </div>
+            <!-- <div class="center-div font-weight-bold">
+                <form action="/" method="post" class="text-center for" style="text-align: center;" id="top_form">
+                    <input placeholder="Search" type="text" id="pname" name="pname" class="wrapper_search border-3 border-white " style="display: inline-block; color: white; ">
+                    <select class="form-select form-select-sm border-3  " style="display: inline-block; color:white; width: 150px;  padding-top: 0.28rem;   border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(255, 255, 255, 0);
+  outline: 0 none;" id="site" name="site">
+                        
+                    </select>
+                    <input type="submit" value="Submit" name="submit" class="search" style="display: inline-block;">
+                </form>
+            </div> -->
+            <div class="right-div font-size" >
+                
+                <a class="nav-link p-0 me-1 " style="color: white;" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+                  </svg></a>
+                
+            </div>
+        </div>
+        
+    
+    {% else %}
+        
+
+        <div class="header" style="border-style: solid; border-top: 4px; border-left: 4px; border-right: 4px; border-width: 4px; border-color: aqua;">
+            <div class="left-div">
+                <img src="/static/logo.png" alt="Webcode4you Logo" height="100px" width="100px" class="logo_login">
+            </div>
+            <div class="center-div">
+            </div>
+            <div class="right-div">
+                <ul class="navbar-nav" style="flex-direction:row-reverse;">
+                    <li class="nav-item p-2"><a class="nav-link" style="color: white;" href="/register">Register</a></li>
+                    <li class="nav-item p-2"><a class="nav-link" style="color: white;" href="/login">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+
+    {% endif %}
+        <div class="content-container">{% block main %}{% endblock %} 
+
+
+        </div>
+    
+
+</body>
+</html>

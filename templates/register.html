@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+
+    <!--<form action="/register" method="post" class="text-center">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto mt-4" id="email" name="email" placeholder="Email" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off"  class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Password Again" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>-->
+
+    <div class="wrapper" style="  display: grid; border-color: aqua; border-width: 4px; border-style: solid;">
+        <div class="title text-white ">
+        Register an account
+        </div>
+        <form action="/register" method="post" class="text-center ps-5 pe-5">
+        <div class="field">
+            <input autocomplete="off" style="background-color: #333; color: white;" autofocus class="" id="email" name="email" placeholder="" type="text" required>
+            <label class="text-white" style="background-color: #333;">Email Address</label>
+        </div>
+        <div class="field">
+            <input class="" id="username" style="background-color: #333; color: white;" name="username" type="text" required>
+            <label class="text-white" style="background-color: #333;">Username</label>
+        </div>
+        <div class="field">
+            <input class="" id="password" style="background-color: #333; color: white;" name="password" type="password" required>
+            <label class="text-white" style="background-color: #333;">Password</label>
+        </div>
+        <div class="field">
+            <input class="" style="background-color: #333; color: white;" id="confirmation" name="confirmation" type="password" required>
+            <label class="text-white" style="background-color: #333;">Password again</label>
+        </div>
+        
+        <div class="field" >
+            <input type="submit" style="margin-top: 10px;">
+        </div>
+        <div class="info-error pt-4">
+                <p>{{data}}</p>
+        </div>
+        
+        </form>
+    </div>
+{% endblock %}

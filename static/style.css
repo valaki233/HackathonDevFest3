@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+
+html, body, div, span{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+
+}
+.nav-item{
+  font-weight: 800;
+
+}
+html {
+  background-color: #151515;
+  -webkit-background-size: 100% 100% cover;
+  -moz-background-size: 100% 100% cover;
+  -o-background-size: 100% 100% cover;
+  background-size: 100% 100% cover;
+  /* set the padding and margin to "0" */
+  margin: 0;
+  padding: 0;
+ /* set the position rules */
+top: 0;
+left: 0;
+}
+
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+::selection{
+  background: #1a1a1a;
+  color: #fff;
+}
+.wrapper{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  margin-top: 15%;
+  width: 30%;
+  background: #333;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100px;
+  color: #333;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  border-color: greenyellow;
+  background: #1a1a1a;
+}
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+}
+.info-error{
+  text-align: center !important;
+  color: rgb(202, 38, 38) !important;
+  width: 70%;
+  margin: 0 auto;
+  word-wrap:break-word;
+
+
+}
+
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 2px solid black;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper_search{
+  
+  height: 45px;
+  width: 80%;
+  outline: none;
+  font-size: 20px;
+  padding-left: 20px;
+  border: 2px solid white;
+  background-color: #333;
+  
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  
+}
+.wrapper_search_blue{
+  
+  height: 50px;
+  width: 50%;
+  outline: none;
+  font-size: 20px;
+  padding-left: 20px;
+  border: 2px solid white;
+  background-color: #0c5d9f;
+  
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  
+}
+
+.wrapper_search_blue:focus{
+  width: 80%;
+  
+  
+  padding-left: 20px;
+  
+  background-color: #ffffff;
+  color: #000 !important;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  
+}
+.wrapper_search_blue::placeholder{
+  color: #fff;
+  
+}
+.wrapper_search_blue::content{
+  color: #fff;
+  
+}
+
+.form-select{
+  width: 150px; 
+  background-color: #333 !important;
+
+
+}
+
+.form-select:focus{
+  border-radius: 10px;
+  
+  outline: none;
+  
+  background-color: #ffffff !important;
+  color: #000 !important;
+  transition: all 0.3s ease !important;
+
+
+}
+
+
+.wrapper_search:focus{
+    width: 80%;
+    
+    
+    padding-left: 20px;
+    
+    background-color: #ffffff;
+    color: #000 !important;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    
+  }
+  .wrapper_search::placeholder{
+    color: #fff;
+    
+  }
+  .wrapper_search::content{
+    color: #fff;
+    
+  }
+  .content-container{
+    margin-top: 3em;
+
+  }
+
+  .logo_logged_in{
+    height: 4em;
+    
+  }
+
+  .search {
+    border: none;
+    width: 42px;
+    height: 44px;
+    background: url("/static/magnifying-glass-3-128.ico") no-repeat center;
+    background-size: 100%;
+    
+    background-position: bottom;
+    
+    text-indent: -9999em;
+}
+
+.wrapper form .field input:focus,
+form .field input:valid{
+    color: #000;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #0c5d9f;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+.pass-link{
+  margin-top: 1em;
+  font-size: smaller;
+
+}
+form .field input[type="submit"]{
+  color: #ffffff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #1a1a1a;
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  font-size: smaller;
+  color: #fff;
+  margin-top: 5px;
+  text-align: center;
+}
+
+form .pass-link a,
+form .signup-link a{
+  color: #0c879f;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+ /* Style for the header container */
+ .header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the left div */
+.left-div {
+    flex: 1; /* Takes up 1/3 of the available space */
+    text-align: left;
+}
+
+/* Style for the center div */
+.center-div {
+    flex: 1; /* Takes up 1/3 of the available space */
+    text-align: center;
+}
+
+/* Style for the right div */
+.right-div {
+    flex: 1; /* Takes up 1/3 of the available space */
+    text-align: right;
+}
+
+
+
+
+.bdr {
+  margin-top: 4em;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+/* The sidenav */
+.sidenav {
+  
+
+  height: 100%;
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  
+  margin-top: 45px;
+
+  
+  
+}
+.box{
+  background-color: white;
+  border-radius: 0.375rem;
+  margin: 10px;
+
+}
+
+.sidenav_expend {
+  
+  transform: translateX(-100%);
+  transition: all 0.5s; 
+  z-index: -1;
+  height: 100%;
+  width: 250px;
+  margin-left: 50px;
+  position: fixed;
+  
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  
+  margin-top: 45px;
+  
+}
+.visible {
+  
+  transform: translateX(0);
+}
+
+
+
+/* Page content */
+.main {
+  margin-left: 50px; /* Same as the width of the sidenav */
+}
+
+
+.side_nav_element {
+  text-decoration: none; 
+  color: #fff;
+}
+.side_nav_element:hover{
+
+  color: #999999;
+}
+.side_nav_element:active{
+
+  color: #999999;
+}
+
+.nav-link{
+  white-space: nowrap;
+
+}
+
+
+.input_underline {
+  background-color: #333;
+  height: 1.3em;
+  border: 0;
+  outline: 0;
+  border-bottom: 4px solid rgb(255, 255, 255);
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 1.2rem;
+  }
+  
+}
+@media only screen and (max-width: 800px) {
+  .wrapper{
+    top:60%;
+    display: block;
+    width: 95%;
+    margin-top: 0;
+    border-radius: 15px;
+    
+  }
+  .content-container{
+    margin: 0;
+  }
+  video{
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+  #pname{
+    width: 150px;
+  }
+  
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+  html {
+    font-size: 1.4rem;
+  }
+  #pname{
+    width: 150px;
+  }
+  #top_form{
+    width: 400px;
+
+  }
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #pname{
+    width: 150px;
+  }
+  html {
+    font-size: 1.4rem;
+  }
+  #top_form{
+    width: 1000px;
+
+  }
+
+}
+@media only screen and (min-width: 1380px) {
+  #pname{
+    width: 250px;
+  }
+
+}
+
+.card {
+  margin: 30px;
+  padding: 20px;
+ }
+
+ .formInputs {
+  border-radius: 5px;
+  padding: 10px;
+ }
