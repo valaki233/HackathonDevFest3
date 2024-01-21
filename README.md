@@ -1,11 +1,11 @@
 # Study Buddy
 ## Revolutionizing Learning: Your Ultimate Study Companion
 ### Project Description
-Welcome to Study Buddy, an innovative website designed to revolutionize the way students approach studying and note-taking. Our project originated from a shared experience as students who often found ourselves struggling to prepare for exams due to a lack of effective study techniques and note-taking skills.
+Welcome to Study Buddy, an innovative website designed to revolutionize the way students approach studying and note-taking. Our project originated from a shared experience as students who often found themselves struggling to prepare for exams due to a lack of effective study techniques and note-taking skills.
 ### Motivation
 Our motivation for undertaking this project was clear - we wanted to create a platform that addresses the unique challenges faced by students in a way different from existing resources. As students ourselves, we understand the frustration of not knowing how to study or take notes efficiently. The desire to find a solution for our own struggles and to help students worldwide led to the creation of Study Buddy.
 ### Uniqueness
-Study Buddy stands out among other study resources by prioritizing the fundamental aspects of studying. Unlike many existing projects that focus on providing solutions or maintaining consistency, our platform aims to teach users how to study effectively with rating their personal notes. We believe that a student can truly benefit from study resources only when equipped with the essential study skills.
+Study Buddy stands out among other study resources by prioritizing the fundamental aspects of studying. Unlike many existing projects that focus on providing solutions or maintaining consistency, our platform aims to teach users how to study effectively by rating their personal notes. We believe that a student can truly benefit from study resources only when equipped with the essential study skills.
 ### Key Features
 ##### 1.    Note-Taking Guidance
 •	Learn effective note-taking techniques through interactive lessons.
