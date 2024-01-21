@@ -1,0 +1,17 @@
+Literature:note.txt:30:2024-01-21
+Literature:note2.txt:40:2024-01-22
+Literature:note3.txt:20:2024-01-23
+Literature:note4.txt:50:2024-01-23
+Literature:note5.txt:90:2024-01-24
+Literature:note6.txt:70:2024-01-25
+Literature:note7.txt:60:2024-01-25
+Literature:note8.txt:20:2024-01-26
+Literature:note9.txt:20:2024-01-26
+Literature:note10.txt:90:2024-01-26
+Literature:note11.txt:80:2024-01-27
+Literature:note12.txt:30:2024-01-27
+Literature:note13.txt:40:2024-01-28
+Literature:note14.txt:60:2024-01-29
+Literature:note15.txt:10:2024-01-30
+Kúróóra:Study Buddy Website.txt:36.5:2024-01-21
+Kúróóra:Study Buddy Website.txt:36.5:2024-01-21
